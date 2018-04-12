@@ -17,12 +17,11 @@ public class Server {
 		  }
 		  for(int i=0;i<20;i++){
 		    ClientWorker w;
-		    Socket s;
+		    Socket cliente;
 		    try{
 		      //Pra cada conexao do cliente, cria uma thread
-		      s = server.accept();
-		      w = new ClientWorker(s);
-		      System.out.println(s);
+		      cliente = server.accept();
+		      w = new ClientWorker(cliente);
 		      Thread t = new Thread(w);
 		      t.start();
 		    } catch (IOException e) {
@@ -33,7 +32,7 @@ public class Server {
 		  try{
 		        server.close();
 		    } catch (IOException e) {
-		        System.out.println("Não foi possível fechar o socket");
+		        System.out.println("Nao foi possivel fechar o socket");
 		        System.exit(-1);
 		    }
 		}

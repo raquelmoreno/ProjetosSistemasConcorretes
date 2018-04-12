@@ -22,7 +22,6 @@ public class Client {
 			out = new PrintWriter(cliente.getOutputStream(),true);
 			in = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
 			String text = read.readLine(); //Le o que foi digitado
-			System.out.println(text);
 			out.println(text); //envia pro servidor
 			System.out.println("Envio ao servidor: " + text);
 			System.out.println("Retorno do servidor: " + in.readLine()); //leu a resposta do servidor
@@ -40,7 +39,7 @@ public class Client {
 			        read.close();
 			        cliente.close();
 				} catch (IOException e) {
-					System.out.println("Não foi possível fechar o socket");
+					System.out.println("Nao foi possivel fechar o socket");
 			        System.exit(-1);
 				}
 

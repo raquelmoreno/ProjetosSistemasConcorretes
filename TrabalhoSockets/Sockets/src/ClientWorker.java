@@ -11,6 +11,7 @@ public class ClientWorker implements Runnable {
 	//Constructor
 	  ClientWorker(Socket client) {
 	    this.client = client;
+	    System.out.println("ClientWorker iniciado. Aguardando msg");
 	  }
 
 	  public void run(){
