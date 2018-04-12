@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
@@ -9,24 +10,39 @@ public class Client {
 	
 	private static PrintWriter out;
 	private static BufferedReader in;
+	private static Socket cliente;
 	
 	public static void main(String[] args) {
-		listening();
-	}
-
-	public static void listening() {
+		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
+	
 		try{
-			Socket cliente = new Socket("localhost",3322);
-			System.out.println("Usando o socket localhost na porta 3322");
+			cliente = new Socket("localhost",1863);
+			System.out.println("Usando o socket localhost na porta 1863");
 			out = new PrintWriter(cliente.getOutputStream(),true);
 			in = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
+			String text = read.readLine(); //Le o que foi digitado
+			out.println(text); //envia pro servidor
+			System.out.println(in.readLine()); //leu a resposta do servidor
 			}catch (UnknownHostException e) {
 			     System.out.println("Unknown host: localhost");
 			     System.exit(1);
 			}catch(Exception e) {
 			      System.out.println("Erro: " + e.getMessage());
 			      System.exit(1);
-		    } 
+		    }finally{
+		    	out.close();
+		        try {
+					in.close();
+			        read.close();
+			        cliente.close();
+				} catch (IOException e) {
+					System.out.println("Could not close socket");
+			        System.exit(-1);
+				}
+
+		    }
+		
+		
 
 	}
 	

@@ -4,19 +4,17 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
-import javax.swing.JTextArea;
 
 public class ClientWorker implements Runnable {
 	private Socket client;
-	private JTextArea textArea;
 
 	//Constructor
-	  ClientWorker(Socket client, JTextArea textArea) {
+	  ClientWorker(Socket client) {
 	    this.client = client;
-	    this.textArea = textArea;
 	  }
 
 	  public void run(){
+		System.out.println("Rodando Thread pro cliente");
 	    String line;
 	    BufferedReader in = null;
 	    PrintWriter out = null;
@@ -32,11 +30,17 @@ public class ClientWorker implements Runnable {
 
 	    while(true){
 	      try{
+	    	//Le o que foi enviado pelo cliente
 	        line = in.readLine();
-	//Send data back to client
+	        //Envia de volta
 	        out.println(line);
-	//Append data to text area
-	        textArea.append(line);
+	        out.flush();
+	        System.out.println("Recebido: " + line);
+	        
+	        out.close();
+	        in.close();
+	        client.close();
+	        
 	       }catch (IOException e) {
 	        System.out.println("Read failed");
 	        System.exit(-1);
