@@ -16,13 +16,17 @@ public class Client {
 		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 	
 		try{
-			cliente = new Socket("localhost",4321);
-			System.out.println("Usando o socket localhost na porta 4321");
+			cliente = new Socket("localhost",1989);
+			System.out.println("Usando o socket localhost na porta 1989");
+			System.out.println("Digite a mensagem desejada: ");
 			out = new PrintWriter(cliente.getOutputStream(),true);
 			in = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
 			String text = read.readLine(); //Le o que foi digitado
+			System.out.println(text);
 			out.println(text); //envia pro servidor
-			System.out.println(in.readLine()); //leu a resposta do servidor
+			System.out.println("Envio ao servidor: " + text);
+			System.out.println("Retorno do servidor: " + in.readLine()); //leu a resposta do servidor
+
 			}catch (UnknownHostException e) {
 			     System.out.println("Unknown host: localhost");
 			     System.exit(1);
@@ -41,8 +45,6 @@ public class Client {
 				}
 
 		    }
-		
-		
 
 	}
 	

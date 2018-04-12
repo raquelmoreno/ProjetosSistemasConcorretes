@@ -28,7 +28,7 @@ public class ClientWorker implements Runnable {
 	      System.exit(-1);
 	    }
 
-	    while(true){
+	    for(int i=0;i<20;i++){
 	      try{
 	    	//Le o que foi enviado pelo cliente
 	        line = in.readLine();
