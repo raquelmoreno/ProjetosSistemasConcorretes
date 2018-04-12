@@ -16,8 +16,8 @@ public class Client {
 		BufferedReader read = new BufferedReader(new InputStreamReader(System.in));
 	
 		try{
-			cliente = new Socket("localhost",1863);
-			System.out.println("Usando o socket localhost na porta 1863");
+			cliente = new Socket("localhost",4321);
+			System.out.println("Usando o socket localhost na porta 4321");
 			out = new PrintWriter(cliente.getOutputStream(),true);
 			in = new BufferedReader(new InputStreamReader(cliente.getInputStream()));
 			String text = read.readLine(); //Le o que foi digitado
@@ -36,7 +36,7 @@ public class Client {
 			        read.close();
 			        cliente.close();
 				} catch (IOException e) {
-					System.out.println("Could not close socket");
+					System.out.println("Não foi possível fechar o socket");
 			        System.exit(-1);
 				}
 

@@ -8,10 +8,10 @@ public class Server {
 	public static void main(String[] args) {
 		
 		  try{
-		    server = new ServerSocket(1863);
-		    System.out.println("Servidor iniciado na porta " + server.getLocalPort());
+		    server = new ServerSocket(4321);
+		    System.out.println("Servidor iniciado na porta: " + server.getLocalPort());
 		  } catch (IOException e) {
-		    System.out.println("Could not listen on port " + server.getLocalPort());
+		    System.out.println("Não foi possível iniciar a porta: " + server.getLocalPort());
 		    System.exit(-1);
 		  }
 		  for(int i=0;i<20;i++){
@@ -23,14 +23,14 @@ public class Server {
 		      Thread t = new Thread(w);
 		      t.start();
 		    } catch (IOException e) {
-		      System.out.println("Accept failed: " + server.getLocalPort());
+		      System.out.println("Falha ao aceitar porta: " + server.getLocalPort());
 		      System.exit(-1);
 		    }
 		  }
 		  try{
 		        server.close();
 		    } catch (IOException e) {
-		        System.out.println("Could not close socket");
+		        System.out.println("Não foi possível fechar o socket");
 		        System.exit(-1);
 		    }
 		}

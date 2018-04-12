@@ -42,7 +42,7 @@ public class ClientWorker implements Runnable {
 	        client.close();
 	        
 	       }catch (IOException e) {
-	        System.out.println("Read failed");
+	        System.out.println("A leitura falhou");
 	        System.exit(-1);
 	       }
 	    }
