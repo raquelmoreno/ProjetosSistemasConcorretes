@@ -7,7 +7,7 @@ public class Server {
 	private static ServerSocket server ;
 	
 	public static void main(String[] args) {
-		
+		//teste
 		  try{
 		    server = new ServerSocket(1989);
 		    System.out.println("Servidor iniciado na porta: " + server.getLocalPort());
