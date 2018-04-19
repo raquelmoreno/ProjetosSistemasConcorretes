@@ -9,14 +9,14 @@ public class Publisher {
 
   public static void main(String[] args) throws MqttException {
 
-    String messageString = "Hello World from Java!";
+    String messageString = "Mensagem...";
 
     if (args.length == 2 ) {
       messageString = args[1];
     }
 
 
-    System.out.println("== START PUBLISHER ==");
+    System.out.println("== INICIANDO PUBLISHER ==");
 
 
     MqttClient client = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());

@@ -7,11 +7,11 @@ import org.eclipse.paho.client.mqttv3.MqttMessage;
 public class SimpleMqttCallBack implements MqttCallback {
 
   public void connectionLost(Throwable throwable) {
-    System.out.println("Connection to MQTT broker lost!");
+    System.out.println("Conexão perdida com o MQTT broker!");
   }
 
   public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-    System.out.println("Message received:\t"+ new String(mqttMessage.getPayload()) );
+    System.out.println("Mensagem recebida:\t"+ new String(mqttMessage.getPayload()) );
   }
 
   public void deliveryComplete(IMqttDeliveryToken iMqttDeliveryToken) {

@@ -7,7 +7,7 @@ public class Subscriber {
 
   public static void main(String[] args) throws MqttException {
 
-    System.out.println("== START SUBSCRIBER ==");
+    System.out.println("== INICIANDO SUBSCRIBER ==");
 
     MqttClient client=new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
     client.setCallback( new SimpleMqttCallBack() );

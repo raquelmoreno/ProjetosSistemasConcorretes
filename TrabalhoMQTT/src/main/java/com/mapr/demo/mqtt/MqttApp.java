@@ -12,7 +12,7 @@ public class MqttApp {
   public static void main(String[] args) throws MqttException {
 
     if (args.length < 1) {
-      throw new IllegalArgumentException("Must have either 'publisher' or 'subscriber' as argument");
+      throw new IllegalArgumentException("Deve haver 'publisher' ou 'subscriber' como argumento");
     }
     switch (args[0]) {
       case "publisher":
@@ -22,7 +22,7 @@ public class MqttApp {
         Subscriber.main(args);
         break;
       default:
-        throw new IllegalArgumentException("Don't know how to do " + args[0]);
+        throw new IllegalArgumentException("Não foi possível realizar " + args[0]);
     }
   }
 }
