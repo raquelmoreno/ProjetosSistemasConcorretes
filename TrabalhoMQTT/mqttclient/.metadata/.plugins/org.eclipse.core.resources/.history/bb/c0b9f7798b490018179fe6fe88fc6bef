@@ -46,7 +46,7 @@ public class Subscriber1 implements MqttCallback {
             MqttConnectOptions connOpts = new MqttConnectOptions();
             connOpts.setCleanSession(true);
 
-            System.out.println("Iniciando a conexao...");
+            System.out.println("Iniciando a conexão...");
 
             System.out.println("Subscriber se conectando com o broker: " + brokerUrl);
             sampleClient.connect(connOpts);

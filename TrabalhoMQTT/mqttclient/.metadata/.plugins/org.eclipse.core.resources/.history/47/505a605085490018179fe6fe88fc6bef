@@ -11,20 +11,20 @@ import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 public class Subscriber1 implements MqttCallback {
 
-    /** endereco Url do broker */
+    /** endereço Url do broker */
     private static final String brokerUrl = "tcp://localhost:1883";
 
     /**  client id. */
     private static final String clientId = "JavaPubSupSampleCefetRJ";
 
-    /** Topico que voce passa na mensagem. */
+    /** Tópico que você passa na mensagem. */
     private static final String topic = "Temperatura";
 
 
    
     public static void main(String[] args) {
     	/**
-           Se inscreve no broker para receber as mensagens cujo topico e temperatura
+           Se inscreve no broker para receber as mensagens cujo tópico é temperatura
          */
         new Subscriber1().subscribe(topic);
     }
@@ -36,7 +36,7 @@ public class Subscriber1 implements MqttCallback {
      *            the topic
      */
     public void subscribe(String topic) {
-     /* Aqui comeca o mecanismo para se inscrever, basicamente voce aloca um espaco na memoria que persiste para realizar a conexao.*/
+     /* Aqui começa o mecanismo para se inscrição, basicamente você aloca um espaço na memória que persiste para realizar a concexão.*/
     	
         MemoryPersistence persistence = new MemoryPersistence();
 
@@ -46,7 +46,7 @@ public class Subscriber1 implements MqttCallback {
             MqttConnectOptions connOpts = new MqttConnectOptions();
             connOpts.setCleanSession(true);
 
-            System.out.println("Iniciando a conexao...");
+            System.out.println("Iniciando a conexão...");
 
             System.out.println("Subscriber se conectando com o broker: " + brokerUrl);
             sampleClient.connect(connOpts);

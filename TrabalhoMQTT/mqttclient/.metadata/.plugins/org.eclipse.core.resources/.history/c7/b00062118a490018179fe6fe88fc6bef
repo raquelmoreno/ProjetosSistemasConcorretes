@@ -29,6 +29,18 @@ public class Publisher {
         int qos2 = 2;
         new Publisher().publish(topic2, content2, qos2);
         
+        String topic3 = "NotaTrabalho";
+        String content3 = "Nota do Trabalho = 10";
+        int qos3 = 2;
+        new Publisher().publish(topic3, content3, qos3);
+        
+        String topic4 = "NotaProva";
+        String content4 = "Nota da Prova = 10";
+        int qos4 = 2;
+        new Publisher().publish(topic4, content4, qos4);
+        
+        
+        
     }
         
         public void publish(String topic, String content, int qos) 
