@@ -26,3 +26,8 @@
 2018-04-26 11:57:11,845 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Higor Pinheiro\Desktop\mqttclient\MqttClient\src\main\resources
 2018-04-26 11:57:11,848 [Worker-1] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-04-26 11:57:11,859 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Higor Pinheiro\Desktop\mqttclient\MqttClient\src\test\resources
+2018-04-26 12:17:10,545 [Worker-3] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: MqttClient:MqttClient:0.0.1-SNAPSHOT @ C:\Users\Higor Pinheiro\Documents\GitHub\ProjetosSistemasConcorretes\TrabalhoMQTT\mqttclient\MqttClient\pom.xml.
+2018-04-26 12:17:17,434 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-26 12:17:17,772 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Higor Pinheiro\Documents\GitHub\ProjetosSistemasConcorretes\TrabalhoMQTT\mqttclient\MqttClient\src\main\resources
+2018-04-26 12:17:17,776 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-04-26 12:17:17,790 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Higor Pinheiro\Documents\GitHub\ProjetosSistemasConcorretes\TrabalhoMQTT\mqttclient\MqttClient\src\test\resources
